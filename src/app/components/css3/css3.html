@@ -1,0 +1,248 @@
+<app-menu></app-menu>
+
+<div class="container">
+  <header class="hero">
+    <h1 class="hero-title">CSS3: Estilo, Diseño &<br>Experiencias Modernas</h1>
+    <p class="hero-subtitle">
+      CSS3 transforma una estructura HTML básica en interfaces atractivas, responsivas y con movimiento. Aprende los
+      pilares del diseño visual web actual: layout, color, tipografía, transiciones y animaciones.
+    </p>
+
+    <div class="hero-media-container">
+      <img
+        src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        alt="Diseño de interfaces con CSS" class="hero-image">
+      <div class="hero-video">
+        @defer (on viewport) {
+        <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/OEV8gMkCHXQ"
+          title="Curso básico de CSS3" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        } @placeholder {
+        <div
+          style="width: 100%; height: 100%; min-height: 315px; background: rgba(0,0,0,0.2); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+          <span style="color: #cbd5e1;">Cargando video...</span>
+        </div>
+        }
+      </div>
+    </div>
+  </header>
+
+  <section class="evolution">
+    <div class="section-header">
+      <h2>Propiedades CSS3 Fundamentales</h2>
+      <p>
+        Dominar estas propiedades te permite construir interfaces limpias, jerárquicas y adaptables a diferentes
+        dispositivos sin depender de librerías externas.
+      </p>
+    </div>
+
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-icon">🎨</div>
+        <div class="timeline-content">
+          <h3>Color, Fondos y Gradientes</h3>
+          <p>
+            <strong>Uso básico:</strong> CSS3 permite definir colores sólidos, transparencias y degradados para crear
+            profundidad visual y reforzar la identidad de una interfaz.
+          </p>
+          <div class="code-example">
+            <code>
+              .banner &#123;<br>
+              &nbsp;&nbsp;background: linear-gradient(135deg, #8b5cf6, #3b82f6);<br>
+              &nbsp;&nbsp;color: #fff;<br>
+              &#125;
+            </code>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-icon">📐</div>
+        <div class="timeline-content">
+          <h3>Flexbox para Distribución</h3>
+          <p>
+            <strong>Uso básico:</strong> Facilita alinear elementos horizontal y verticalmente, repartir espacios y
+            construir componentes ordenados con poco código.
+          </p>
+          <div class="code-example">
+            <code>
+              .card-container &#123;<br>
+              &nbsp;&nbsp;display: flex;<br>
+              &nbsp;&nbsp;justify-content: space-between;<br>
+              &nbsp;&nbsp;align-items: center;<br>
+              &#125;
+            </code>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-icon">🧱</div>
+        <div class="timeline-content">
+          <h3>Grid para Layout Complejo</h3>
+          <p>
+            <strong>Uso básico:</strong> CSS Grid organiza contenido en filas y columnas para crear diseños robustos y
+            responsivos, ideales para dashboards y portales.
+          </p>
+          <div class="code-example">
+            <code>
+              .dashboard &#123;<br>
+              &nbsp;&nbsp;display: grid;<br>
+              &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br>
+              &nbsp;&nbsp;gap: 16px;<br>
+              &#125;
+            </code>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-icon">✨</div>
+        <div class="timeline-content">
+          <h3>Transiciones y Estados</h3>
+          <p>
+            <strong>Uso básico:</strong> Las transiciones suavizan cambios visuales cuando el usuario interactúa con
+            botones, enlaces o tarjetas.
+          </p>
+          <div class="code-example">
+            <code>
+              .btn &#123;<br>
+              &nbsp;&nbsp;transition: transform 0.3s ease;<br>
+              &#125;<br>
+              .btn:hover &#123;<br>
+              &nbsp;&nbsp;transform: translateY(-3px);<br>
+              &#125;
+            </code>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-icon">📱</div>
+        <div class="timeline-content">
+          <h3>Media Queries</h3>
+          <p>
+            <strong>Uso básico:</strong> Adaptan tipografías, espaciados y columnas para que la interfaz sea usable en
+            escritorio, tablet y móvil.
+          </p>
+          <div class="code-example">
+            <code>
+              &#64;media (max-width: 768px) &#123;<br>
+              &nbsp;&nbsp;.grid &#123; grid-template-columns: 1fr; &#125;<br>
+              &#125;
+            </code>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="architecture">
+    <div class="section-header">
+      <h2>Ejemplos de Reglas CSS3 Aplicadas a HTML</h2>
+      <p>
+        En esta sección puedes ver cómo una regla CSS3 transforma directamente un elemento HTML. Cada tarjeta incluye
+        el código y su resultado visual.
+      </p>
+    </div>
+
+    <div class="controls-grid">
+      <article class="control-card">
+        <h3>1. Botón con transición</h3>
+        <p class="control-desc">
+          Regla CSS aplicada a un <code>&lt;button&gt;</code> para generar un efecto suave al pasar el cursor.
+        </p>
+        <div class="code-example">
+          <code>
+            .demo-button &#123;<br>
+            &nbsp;&nbsp;background: #8b5cf6;<br>
+            &nbsp;&nbsp;transition: transform .3s ease;<br>
+            &#125;<br>
+            .demo-button:hover &#123;<br>
+            &nbsp;&nbsp;transform: translateY(-4px);<br>
+            &#125;
+          </code>
+        </div>
+        <div class="control-interactive">
+          <button class="demo-button">Hover sobre mí</button>
+        </div>
+        <div class="control-result">
+          <span>HTML:</span>
+          <strong>&lt;button class="demo-button"&gt;...&lt;/button&gt;</strong>
+        </div>
+      </article>
+
+      <article class="control-card">
+        <h3>2. Tarjeta con sombra y borde redondeado</h3>
+        <p class="control-desc">
+          Regla CSS para dar profundidad visual a un <code>&lt;div&gt;</code> con <code>box-shadow</code> y
+          <code>border-radius</code>.
+        </p>
+        <div class="code-example">
+          <code>
+            .demo-box &#123;<br>
+            &nbsp;&nbsp;border-radius: 14px;<br>
+            &nbsp;&nbsp;box-shadow: 0 10px 25px rgba(0,0,0,.35);<br>
+            &nbsp;&nbsp;background: rgba(15,23,42,.7);<br>
+            &#125;
+          </code>
+        </div>
+        <div class="control-interactive">
+          <div class="demo-box">Soy un DIV estilizado con CSS3</div>
+        </div>
+        <div class="control-result">
+          <span>HTML:</span>
+          <strong>&lt;div class="demo-box"&gt;...&lt;/div&gt;</strong>
+        </div>
+      </article>
+
+      <article class="control-card">
+        <h3>3. Texto con gradiente</h3>
+        <p class="control-desc">
+          Regla CSS para aplicar un gradiente a un encabezado <code>&lt;h4&gt;</code> usando
+          <code>background-clip: text</code>.
+        </p>
+        <div class="code-example">
+          <code>
+            .demo-gradient-text &#123;<br>
+            &nbsp;&nbsp;background: linear-gradient(90deg, #22d3ee, #a78bfa);<br>
+            &nbsp;&nbsp;-webkit-background-clip: text;<br>
+            &nbsp;&nbsp;-webkit-text-fill-color: transparent;<br>
+            &#125;
+          </code>
+        </div>
+        <div class="control-interactive">
+          <h4 class="demo-gradient-text">CSS3 hace destacar el contenido</h4>
+        </div>
+        <div class="control-result">
+          <span>HTML:</span>
+          <strong>&lt;h4 class="demo-gradient-text"&gt;...&lt;/h4&gt;</strong>
+        </div>
+      </article>
+
+      <article class="control-card">
+        <h3>4. Animación CSS3 con keyframes</h3>
+        <p class="control-desc">
+          Ejemplo de animación continua aplicada a un <code>&lt;div&gt;</code> para simular un “loader”.
+        </p>
+        <div class="code-example">
+          <code>
+            &#64;keyframes spin &#123;<br>
+            &nbsp;&nbsp;from &#123; transform: rotate(0deg); &#125;<br>
+            &nbsp;&nbsp;to &#123; transform: rotate(360deg); &#125;<br>
+            &#125;<br>
+            .demo-loader &#123; animation: spin 1.2s linear infinite; &#125;
+          </code>
+        </div>
+        <div class="control-interactive">
+          <div class="demo-loader" aria-label="Animación de carga"></div>
+        </div>
+        <div class="control-result">
+          <span>HTML:</span>
+          <strong>&lt;div class="demo-loader"&gt;&lt;/div&gt;</strong>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>

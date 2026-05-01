@@ -1,0 +1,203 @@
+.home-container {
+  padding: 2rem 1.25rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #e2e8f0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: white;
+  animation: fadeIn 0.8s ease-in;
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-section p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #cbd5e1;
+  max-width: 820px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.quick-links {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.quick-links a {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.quick-links a:hover {
+  opacity: 0.92;
+}
+
+.overview-section,
+.learning-sections,
+.navigation-section {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.overview-section h2,
+.learning-sections h2,
+.navigation-section h2 {
+  margin: 0 0 0.8rem;
+  color: #f8fafc;
+}
+
+.overview-section p {
+  margin: 0;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.content-card {
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.card-tag {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #bfdbfe;
+  background: rgba(59, 130, 246, 0.16);
+  border: 1px solid rgba(96, 165, 250, 0.35);
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+}
+
+.content-card h3 {
+  margin: 0 0 0.65rem;
+  color: #f8fafc;
+  font-size: 1.06rem;
+}
+
+.content-card ul {
+  margin: 0 0 0.8rem;
+  padding-left: 1rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.content-card li {
+  margin-bottom: 0.35rem;
+}
+
+.content-card a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.content-card a:hover {
+  text-decoration: underline;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.nav-card {
+  text-decoration: none;
+  display: block;
+  background: rgba(30, 41, 59, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-card h3 {
+  margin: 0 0 0.45rem;
+  color: #f8fafc;
+  font-size: 1.06rem;
+}
+
+.nav-card p {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+.nav-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(167, 139, 250, 0.45);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .welcome-section {
+    padding: 2rem 1rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-section p {
+    font-size: 1rem;
+  }
+
+  .overview-section,
+  .learning-sections,
+  .navigation-section {
+    padding: 1.2rem;
+  }
+}

@@ -1,0 +1,127 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(ellipse at bottom, #321b35 0%, #090a0f 100%);
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.global-space-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+app-root {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-shell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+#stars,
+#stars2,
+#stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+#stars {
+  width: 1px;
+  height: 1px;
+  box-shadow:
+    50px 120px #fff, 140px 480px #fff, 260px 780px #fff, 380px 320px #fff, 540px 960px #fff,
+    690px 210px #fff, 820px 610px #fff, 980px 140px #fff, 1110px 700px #fff, 1250px 360px #fff,
+    1380px 920px #fff, 1540px 250px #fff, 1690px 630px #fff, 1830px 170px #fff, 1940px 820px #fff,
+    120px 1420px #fff, 280px 1680px #fff, 420px 1210px #fff, 560px 1760px #fff, 710px 1360px #fff,
+    860px 1540px #fff, 1020px 1110px #fff, 1180px 1890px #fff, 1330px 1460px #fff, 1470px 1320px #fff,
+    1620px 1820px #fff, 1780px 1190px #fff, 1910px 1600px #fff, 340px 1960px #fff, 980px 1980px #fff;
+  animation: animStar 50s linear infinite;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  box-shadow:
+    90px 240px #fff, 220px 860px #fff, 430px 520px #fff, 650px 1090px #fff, 840px 290px #fff,
+    1030px 910px #fff, 1230px 430px #fff, 1410px 1020px #fff, 1620px 530px #fff, 1840px 980px #fff,
+    260px 1320px #fff, 520px 1710px #fff, 770px 1260px #fff, 970px 1840px #fff, 1210px 1420px #fff,
+    1460px 1760px #fff, 1710px 1370px #fff, 1910px 1880px #fff;
+  animation: animStar 100s linear infinite;
+}
+
+#stars2::after {
+  content: "";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  box-shadow:
+    180px 640px #fff, 520px 240px #fff, 830px 780px #fff, 1140px 340px #fff, 1460px 910px #fff,
+    1720px 470px #fff, 310px 1540px #fff, 690px 1320px #fff, 980px 1760px #fff, 1380px 1480px #fff,
+    1760px 1700px #fff;
+  animation: animStar 150s linear infinite;
+}
+
+#stars3::after {
+  content: "";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}

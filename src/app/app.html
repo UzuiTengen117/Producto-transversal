@@ -1,0 +1,13 @@
+<div class="global-space-bg" aria-hidden="true">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+</div>
+
+<div class="app-shell">
+@if (isLoading()) {
+  <app-loader></app-loader>
+}
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+</div>

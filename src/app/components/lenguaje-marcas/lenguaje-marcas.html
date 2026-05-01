@@ -1,0 +1,197 @@
+<app-menu></app-menu>
+
+<div class="container">
+  <header class="hero">
+    <h1 class="hero-title">Lenguajes de Marcas &<br>Estructura Web</h1>
+    <p class="hero-subtitle">Descubre el poder de HTML5, el lenguaje fundamental que da estructura y significado a cada página en la World Wide Web. Aprende a crear interfaces ricas y accesibles.</p>
+
+    <div class="hero-media-container">
+      <img
+        src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        alt="Código HTML5" class="hero-image">
+      <div class="hero-video">
+        @defer (on viewport) {
+        <iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/mJgBOIoGihA"
+          title="Introducción a HTML" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        } @placeholder {
+        <div
+          style="width: 100%; height: 100%; min-height: 315px; background: rgba(0,0,0,0.2); border-radius: 16px; display: flex; align-items: center; justify-content: center;">
+          <span style="color: #cbd5e1;">Cargando video...</span>
+        </div>
+        }
+      </div>
+    </div>
+  </header>
+
+  <section class="evolution">
+    <div class="section-header">
+      <h2>Etiquetas HTML5 Esenciales</h2>
+      <p>HTML5 introdujo etiquetas semánticas que no solo estructuran el contenido visualmente, sino que también proporcionan significado para buscadores y lectores de pantalla.</p>
+    </div>
+
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-icon">📄</div>
+        <div class="timeline-content">
+          <h3>&lt;article&gt;</h3>
+          <p><strong>Uso Básico:</strong> Define contenido independiente y autónomo. Un artículo debería tener sentido por sí mismo, y debería ser posible distribuirlo independientemente del resto del sitio.</p>
+          <div class="code-example">
+            <code>
+              &lt;article&gt;<br>
+              &nbsp;&nbsp;&lt;h2&gt;Título del post&lt;/h2&gt;<br>
+              &nbsp;&nbsp;&lt;p&gt;Contenido...&lt;/p&gt;<br>
+              &lt;/article&gt;
+            </code>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-icon">🧭</div>
+        <div class="timeline-content">
+          <h3>&lt;nav&gt;</h3>
+          <p><strong>Uso Básico:</strong> Representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos.</p>
+          <div class="code-example">
+            <code>
+              &lt;nav&gt;<br>
+              &nbsp;&nbsp;&lt;ul&gt;<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;<br>
+              &nbsp;&nbsp;&lt;/ul&gt;<br>
+              &lt;/nav&gt;
+            </code>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-icon">🖼️</div>
+        <div class="timeline-content">
+          <h3>&lt;figure&gt; & &lt;figcaption&gt;</h3>
+          <p><strong>Uso Básico:</strong> Se utiliza para encapsular contenido multimedia (como imágenes, diagramas, código) junto con un título opcional que lo describe.</p>
+          <div class="code-example">
+            <code>
+              &lt;figure&gt;<br>
+              &nbsp;&nbsp;&lt;img src="img.jpg" alt="..."&gt;<br>
+              &nbsp;&nbsp;&lt;figcaption&gt;Descripción&lt;/figcaption&gt;<br>
+              &lt;/figure&gt;
+            </code>
+          </div>
+        </div>
+      </article>
+      
+      <article class="timeline-item">
+        <div class="timeline-icon">📅</div>
+        <div class="timeline-content">
+          <h3>&lt;time&gt;</h3>
+          <p><strong>Uso Básico:</strong> Representa una fecha y/o hora específica. Útil para que los motores de búsqueda interpreten las fechas de publicación correctamente.</p>
+          <div class="code-example">
+            <code>
+              &lt;p&gt;Publicado el &lt;br&gt;<br>
+              &lt;time datetime="2023-10-25"&gt;<br>
+              25 de Octubre&lt;/time&gt;&lt;/p&gt;
+            </code>
+          </div>
+        </div>
+      </article>
+      
+      <article class="timeline-item">
+        <div class="timeline-icon">📊</div>
+        <div class="timeline-content">
+          <h3>&lt;progress&gt; & &lt;meter&gt;</h3>
+          <p><strong>Uso Básico:</strong> 'progress' muestra el progreso de una tarea, mientras que 'meter' representa un valor escalar dentro de un rango conocido (como el uso de disco).</p>
+          <div class="code-example">
+            <code>
+              &lt;progress value="70" max="100"&gt;&lt;/progress&gt;<br>
+              &lt;meter value="2" min="0" max="10"&gt;&lt;/meter&gt;
+            </code>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="architecture">
+    <div class="section-header">
+      <h2>Elementos de Control Interactivos</h2>
+      <p>Explora cómo funcionan diferentes tipos de inputs y controles HTML en tiempo real. Interactúa con ellos para ver su comportamiento.</p>
+    </div>
+
+    <div class="controls-grid">
+      <!-- Control 1: Input de Texto -->
+      <div class="control-card">
+        <h3>1. Entrada de Texto</h3>
+        <p class="control-desc">Un campo de texto estándar (<code>type="text"</code>) para datos alfanuméricos cortos. Incluye un placeholder.</p>
+        <div class="control-interactive">
+          <input type="text" class="custom-input" placeholder="Escribe tu nombre..." [(ngModel)]="textValue">
+        </div>
+        <div class="control-result">
+          <span>Valor actual:</span>
+          <strong>{{ textValue || '(vacío)' }}</strong>
+        </div>
+      </div>
+
+      <!-- Control 2: Input de Rango -->
+      <div class="control-card">
+        <h3>2. Control de Rango (Slider)</h3>
+        <p class="control-desc">Selector numérico visual (<code>type="range"</code>) ideal para ajustar volumen, brillo o valores aproximados.</p>
+        <div class="control-interactive">
+          <input type="range" class="custom-range" min="0" max="100" [(ngModel)]="rangeValue">
+        </div>
+        <div class="control-result">
+          <span>Nivel seleccionado:</span>
+          <strong>{{ rangeValue }}%</strong>
+          <div class="progress-bar-demo" [style.width.%]="rangeValue"></div>
+        </div>
+      </div>
+
+      <!-- Control 3: Input de Color -->
+      <div class="control-card">
+        <h3>3. Selector de Color</h3>
+        <p class="control-desc">Permite elegir un color mediante la interfaz del sistema (<code>type="color"</code>). Útil para personalización de temas.</p>
+        <div class="control-interactive">
+          <input type="color" class="custom-color" [(ngModel)]="colorValue">
+        </div>
+        <div class="control-result">
+          <span>Color hexadecimal:</span>
+          <strong>{{ colorValue }}</strong>
+          <div class="color-preview" [style.backgroundColor]="colorValue"></div>
+        </div>
+      </div>
+
+      <!-- Control 4: Input de Fecha -->
+      <div class="control-card">
+        <h3>4. Selector de Fecha</h3>
+        <p class="control-desc">Abre un calendario nativo del navegador (<code>type="date"</code>) asegurando un formato de fecha consistente.</p>
+        <div class="control-interactive">
+          <input type="date" class="custom-date" [(ngModel)]="dateValue">
+        </div>
+        <div class="control-result">
+          <span>Fecha seleccionada:</span>
+          <strong>{{ dateValue || 'Ninguna' }}</strong>
+        </div>
+      </div>
+
+      <!-- Control 5: Checkbox Tipo Switch -->
+      <div class="control-card">
+        <h3>5. Casilla de Verificación</h3>
+        <p class="control-desc">Un <code>type="checkbox"</code> estilizado como un interruptor. Permite activar o desactivar opciones binarias.</p>
+        <div class="control-interactive">
+          <label class="toggle-switch">
+            <input type="checkbox" [(ngModel)]="switchValue">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="control-result">
+          <span>Estado del sistema:</span>
+          <strong [class.text-active]="switchValue" [class.text-inactive]="!switchValue">
+            {{ switchValue ? 'ACTIVADO' : 'DESACTIVADO' }}
+          </strong>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
