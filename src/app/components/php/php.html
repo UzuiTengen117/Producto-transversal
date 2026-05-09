@@ -1,0 +1,79 @@
+<app-menu></app-menu>
+
+<div class="container">
+  <header class="hero" aria-labelledby="php-h1">
+    <h1 id="php-h1">Programación PHP</h1>
+    <p>
+      Esta ruta de Angular documenta el <strong>entregable PHP</strong>: un sitio con HTML, CSS, JS y
+      scripts servidor en la carpeta <code>php-proyecto-transversal/</code>. Ahí encontrarás formularios
+      POST, respuestas dinámicas, <strong>sesión</strong> y <strong>cookie</strong>,
+      <strong>validación con expresiones regulares</strong>, <strong>ficheros</strong> y base de datos con
+      <strong>PDO</strong> (SQLite), más los tres documentos de la práctica.
+    </p>
+  </header>
+
+  <section class="info-section" aria-labelledby="t2">
+    <h2 id="t2">Angular frente al proyecto PHP</h2>
+    <div class="two-cols">
+      <div class="col-card">
+        <h3>Este sitio (SPA)</h3>
+        <p>
+          Lo que ves en <code>/php</code> es solo documentación en el navegador. La lógica PHP no se
+          ejecuta aquí; sirve para enlazar la asignatura con tu repositorio.
+        </p>
+      </div>
+      <div class="col-card col-accent">
+        <h3>Carpeta «php-proyecto-transversal»</h3>
+        <p>
+          Cópiala a <code>htdocs</code> (XAMPP) o <code>www</code> (WAMP) y ábrela con
+          <code>http://localhost/…</code> o <code>http://localhost:8080/…</code> según el puerto de Apache.
+          Detalle en <code>INSTRUCCIONES_EJECUCION.txt</code>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section" aria-labelledby="t3">
+    <h2 id="t3">Qué cumple el entregable</h2>
+    <ul class="check-list">
+      <li>Formularios que envían datos al servidor y muestran respuesta HTML generada por PHP.</li>
+      <li>Cookies (<code>ultima_visita</code>) y sesión (<code>$_SESSION</code>).</li>
+      <li>Validación con <code>preg_match</code> en <code>php/validacion.php</code>.</li>
+      <li>Ficheros: log <code>data/visitas.log</code>, subidas en <code>data/uploads/</code>, <code>scandir</code>.</li>
+      <li>PDO: registro, contacto, listado, actualización de perfil (INSERT/SELECT/UPDATE).</li>
+    </ul>
+  </section>
+
+  <section class="info-section" aria-labelledby="t4">
+    <h2 id="t4">Estructura de la carpeta principal</h2>
+    <div class="mono-block" translate="no">
+      php-proyecto-transversal/<br />
+      ├── index.html<br />
+      ├── assets/styles.css · js/main.js · images/ · fonts/<br />
+      ├── pages/ (registro, login, perfil, contacto, archivos, consultas-bd)<br />
+      ├── php/ (registro.php, login.php, …)<br />
+      ├── data/ (SQLite, log, uploads)<br />
+      ├── INSTRUCCIONES_EJECUCION.txt<br />
+      ├── DOCUMENTACION_FUNCIONALIDADES_PHP.md<br />
+      └── EJEMPLOS_BASE_DE_DATOS_PDO.md
+    </div>
+  </section>
+
+  <section class="info-section" aria-labelledby="t5">
+    <h2 id="t5">Documentación incluida</h2>
+    <div class="doc-grid">
+      <article class="doc-tile">
+        <h3>Instrucciones de ejecución</h3>
+        <p>XAMPP/WAMP, ubicación de la carpeta, URL local, puerto 8080, php.ini y extensiones.</p>
+      </article>
+      <article class="doc-tile">
+        <h3>Funcionalidades PHP</h3>
+        <p>Listado de scripts, interacción con el HTML, fragmentos de código y lógica.</p>
+      </article>
+      <article class="doc-tile">
+        <h3>PDO y base de datos</h3>
+        <p>Conexión, SELECT, INSERT, UPDATE, DELETE con consultas preparadas (incluye el texto del guion).</p>
+      </article>
+    </div>
+  </section>
+</div>

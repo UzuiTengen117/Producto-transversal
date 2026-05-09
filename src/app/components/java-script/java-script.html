@@ -1,0 +1,108 @@
+<app-menu></app-menu>
+
+<div class="container">
+  <section class="hero" aria-labelledby="js-page-title">
+    <h1 id="js-page-title">JavaScript en el navegador</h1>
+    <p>
+      JavaScript permite reaccionar a clics y actualizar la página sin recargarla. La demo siguiente usa
+      <code>querySelector</code>, variables, bucles <code>for</code> y condiciones para armar contenido y
+      responder a eventos.
+    </p>
+  </section>
+
+  <section class="interactive-section" aria-labelledby="js-interactive-title">
+    <h2 id="js-interactive-title">Demo: plan de estudio dinámico</h2>
+    <p>
+      Elige un nivel (o déjalo y solo pulsa el botón). Se actualizan varias zonas: título, badge de
+      cantidad, lista y mensajes de estado. También puedes <strong>hacer clic en cada tema</strong> para
+      marcarlo como repasado.
+    </p>
+
+    <div class="demo-container">
+      <label class="sr-only" for="jsLevel">Nivel de profundidad</label>
+      <select
+        #jsLevel
+        id="jsLevel"
+        class="level-select"
+        aria-describedby="jsSummary"
+        (change)="buildList()"
+      >
+        <option value="basico">Básico</option>
+        <option value="intermedio">Intermedio</option>
+        <option value="avanzado">Avanzado</option>
+      </select>
+      <button
+        type="button"
+        id="jsBuildBtn"
+        class="demo-btn"
+        (click)="buildList()"
+      >
+        Generar lista
+      </button>
+      <button
+        type="button"
+        id="jsClearBtn"
+        class="demo-btn demo-btn-secondary"
+        (click)="clearList()"
+      >
+        Limpiar
+      </button>
+    </div>
+
+    <div class="demo-area">
+      <div class="demo-area-header">
+        <p #jsHeadline id="jsHeadline" class="dynamic-headline">
+          Generando vista previa…
+        </p>
+        <span #jsTopicBadge id="jsTopicBadge" class="topic-badge" aria-live="polite"
+          >—</span
+        >
+      </div>
+      <p #jsProgressHint id="jsProgressHint" class="progress-hint">
+        Cuando exista una lista, pulsa cada fila para marcarla como «revisada».
+      </p>
+      <ul
+        #jsConceptList
+        id="jsConceptList"
+        class="concept-list"
+        role="list"
+        (click)="onListClick($event)"
+        (keydown)="onListKeydown($event)"
+      ></ul>
+      <p #jsSummary id="jsSummary" class="summary-line" aria-live="polite">
+        Preparando el resumen…
+      </p>
+    </div>
+  </section>
+
+  <section class="concept-section" aria-labelledby="js-concepts-title">
+    <h2 id="js-concepts-title">Qué hace el código</h2>
+    <p>
+      <strong>Variables</strong> guardan el nivel elegido, el bloque de temas encontrado y contadores.
+      Los <strong>bucles</strong> recorren el catálogo y cada tema para crear nodos <code>&lt;li&gt;</code>.
+      Las <strong>condiciones</strong> eligen el mensaje del resumen, alternan clases visuales y calculan
+      el texto de progreso al marcar filas.
+    </p>
+    <div class="example-box">
+      <h3>Elementos del DOM tocados</h3>
+      <ul>
+        <li><strong>#jsHeadline</strong>, <strong>#jsTopicBadge</strong>, <strong>#jsProgressHint</strong></li>
+        <li><strong>#jsConceptList</strong> (lista generada) y <strong>#jsSummary</strong> (resumen)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="importance-section" aria-labelledby="js-why-title">
+    <h2 id="js-why-title">Por qué importa</h2>
+    <p>
+      Manipular el DOM con JavaScript es la base de formularios dinámicos, paneles y aplicaciones de una
+      sola página. Separar datos (arreglos de temas) de la vista facilita ampliar niveles o añadir
+      interactividad sin recargar.
+    </p>
+    <ul>
+      <li><strong>UX:</strong> respuesta inmediata al usuario.</li>
+      <li><strong>Accesibilidad:</strong> textos con <code>aria-live</code> en los cambios importantes.</li>
+      <li><strong>Mantenimiento:</strong> un solo lugar (<code>catalog</code>) define los temas por nivel.</li>
+    </ul>
+  </section>
+</div>
