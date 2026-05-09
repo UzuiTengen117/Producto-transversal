@@ -2,17 +2,31 @@
   <div class="navbar-container">
     <div class="navbar-logo">
       <span class="logo-icon">◆</span>
-      <a href="/">WebCore</a>
+      <a routerLink="/" class="logo-text">WebCore</a>
     </div>
 
     <ul class="navbar-menu" [class.active]="isMenuOpen">
-      <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
-      <li class="nav-item"><a href="/arquitecturayservicios" class="nav-link">Arquitectura y servicios </a></li>
-      <li class="nav-item"><a href="/lenguajedemarcas" class="nav-link">Lenguaje de marcas</a></li>
-      <li class="nav-item"><a href="/css3" class="nav-link">CSS3</a></li>
-      <li class="nav-item"><a href="/usabilidad" class="nav-link">Usabilidad</a></li>
-      <li class="nav-item"><a href="/javascript" class="nav-link">JavaScript</a></li>
-      <li class="nav-item"><a href="/php" class="nav-link">PHP</a></li>
+      <li class="nav-item">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/arquitecturayservicios" routerLinkActive="active" class="nav-link">Arquitectura y servicios</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/lenguajedemarcas" routerLinkActive="active" class="nav-link">Lenguaje de marcas</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/css3" routerLinkActive="active" class="nav-link">CSS3</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/usabilidad" routerLinkActive="active" class="nav-link">Usabilidad</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/javascript" routerLinkActive="active" class="nav-link">JavaScript</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/php" routerLinkActive="active" class="nav-link">PHP</a>
+      </li>
     </ul>
 
     <div class="navbar-toggle" (click)="toggleMenu()">
