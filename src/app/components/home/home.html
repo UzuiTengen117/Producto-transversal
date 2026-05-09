@@ -7,8 +7,8 @@
       arquitectura cliente-servidor, lenguaje de marcas con HTML5 y diseño visual avanzado con CSS3.
     </p>
     <div class="quick-links">
-      <a href="/arquitecturayservicios">Comenzar recorrido</a>
-      <a href="/css3">Ver sección de CSS3</a>
+      <a routerLink="/arquitecturayservicios">Comenzar recorrido</a>
+      <a routerLink="/css3">Ver sección de CSS3</a>
     </div>
   </section>
 
@@ -31,7 +31,7 @@
           <li>Cómo se comunican cliente, servidor y protocolos HTTP/HTTPS.</li>
           <li>Simulación de una petición HTTP para visualizar el flujo completo.</li>
         </ul>
-        <a href="/arquitecturayservicios">Ir a arquitectura y servicios</a>
+        <a routerLink="/arquitecturayservicios">Ir a arquitectura y servicios</a>
       </article>
 
       <article class="content-card">
@@ -42,7 +42,7 @@
           <li>Elementos de tiempo, progreso y medición para contenido semántico.</li>
           <li>Controles interactivos: texto, rango, color, fecha y checkbox.</li>
         </ul>
-        <a href="/lenguajedemarcas">Ir a lenguaje de marcas</a>
+        <a routerLink="/lenguajedemarcas">Ir a lenguaje de marcas</a>
       </article>
 
       <article class="content-card">
@@ -53,29 +53,79 @@
           <li>Aplicación de reglas CSS3 sobre elementos HTML reales.</li>
           <li>Animaciones con <code>@keyframes</code> y referencia a frameworks CSS.</li>
         </ul>
-        <a href="/css3">Ir a CSS3</a>
+        <a routerLink="/css3">Ir a CSS3</a>
+      </article>
+
+      <article class="content-card">
+        <span class="card-tag">Usabilidad</span>
+        <h3>UX, accesibilidad y diseño</h3>
+        <ul>
+          <li>Principios fundamentales de experiencia de usuario (UX).</li>
+          <li>Heurísticas de usabilidad para interfaces intuitivas.</li>
+          <li>Estándares de accesibilidad web y buenas prácticas.</li>
+        </ul>
+        <a routerLink="/usabilidad">Ir a Usabilidad</a>
+      </article>
+
+      <article class="content-card">
+        <span class="card-tag">JavaScript</span>
+        <h3>Interactividad y lógica</h3>
+        <ul>
+          <li>Fundamentos del lenguaje y manipulación del DOM.</li>
+          <li>Gestión de eventos y respuestas dinámicas del usuario.</li>
+          <li>Consumo de APIs y asincronía con Fetch.</li>
+        </ul>
+        <a routerLink="/javascript">Ir a JavaScript</a>
+      </article>
+
+      <article class="content-card">
+        <span class="card-tag">PHP</span>
+        <h3>Desarrollo backend y servidor</h3>
+        <ul>
+          <li>Procesamiento de formularios y lógica del lado del servidor.</li>
+          <li>Gestión de sesiones, cookies y seguridad básica.</li>
+          <li>Conexión a bases de datos y persistencia con PDO.</li>
+        </ul>
+        <a routerLink="/php">Ir a PHP</a>
       </article>
     </div>
   </section>
 
-  <section class="navigation-section">
-    <h2>Navegación rápida</h2>
-    <div class="nav-grid">
-      <a class="nav-card" href="/">
+  <section class="navigation-section" aria-labelledby="nav-rapida">
+    <h2 id="nav-rapida">Navegación rápida</h2>
+    <div class="nav-grid" role="navigation" aria-label="Accesos principales del sitio">
+      <a
+        class="nav-card"
+        routerLink="/"
+        routerLinkActive="nav-card-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
         <h3>Inicio</h3>
         <p>Portada y guía del sitio</p>
       </a>
-      <a class="nav-card" href="/arquitecturayservicios">
+      <a class="nav-card" routerLink="/arquitecturayservicios" routerLinkActive="nav-card-active">
         <h3>Arquitectura y servicios</h3>
         <p>Modelo cliente-servidor y evolución de la web</p>
       </a>
-      <a class="nav-card" href="/lenguajedemarcas">
+      <a class="nav-card" routerLink="/lenguajedemarcas" routerLinkActive="nav-card-active">
         <h3>Lenguaje de marcas</h3>
         <p>Estructura HTML5 y etiquetas semánticas</p>
       </a>
-      <a class="nav-card" href="/css3">
+      <a class="nav-card" routerLink="/css3" routerLinkActive="nav-card-active">
         <h3>CSS3</h3>
         <p>Reglas, animaciones y frameworks CSS</p>
+      </a>
+      <a class="nav-card" routerLink="/usabilidad" routerLinkActive="nav-card-active">
+        <h3>Usabilidad</h3>
+        <p>Principios de diseño, UX y accesibilidad web</p>
+      </a>
+      <a class="nav-card" routerLink="/javascript" routerLinkActive="nav-card-active">
+        <h3>JavaScript</h3>
+        <p>Interactividad, DOM y lógica de programación</p>
+      </a>
+      <a class="nav-card" routerLink="/php" routerLinkActive="nav-card-active">
+        <h3>PHP</h3>
+        <p>Servidor, bases de datos y backend</p>
       </a>
     </div>
   </section>
